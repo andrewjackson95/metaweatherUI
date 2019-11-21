@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    min-height: 100vh;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("C:\Users\Administrator\weatherUI\src\assets\weatherbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    filter: blur(5px);
+    z-index: -10;
+}

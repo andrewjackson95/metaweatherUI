@@ -1,0 +1,9 @@
+<h1>{{weatherData?.title}}</h1>
+<div *ngFor="let weather of today">
+    <h3>
+        Temperature: {{weather.max_temp|number:"1.0-0"}} 'C
+        Humidity: {{weather.humidity}}
+        Wind Speed: {{weather.wind_speed|number:"1.0-0"}} mph
+        {{weather.weather_state_name}}
+    </h3>
+</div>
