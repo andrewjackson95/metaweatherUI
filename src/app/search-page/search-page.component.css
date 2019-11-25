@@ -9,7 +9,22 @@
 .search-box{
     display: inline;
     margin: auto;
-    border: 3px solid blanchedalmond;
     padding: 7px;
     border-radius: 25px;
+}
+
+#sBox{
+    border-radius: 30px;
+    padding: 5px;
+    border-color: black;
+    color: cornsilk;
+    background-color: rgb(153, 164, 214);
+}
+
+#sButton{
+    border-radius: 30px;
+    padding: 5px;
+    border-color: black;
+    color: cornsilk;
+    background-color: rgb(153, 164, 214);
 }

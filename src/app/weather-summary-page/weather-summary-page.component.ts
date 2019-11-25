@@ -19,16 +19,18 @@ export class WeatherSummaryPageComponent implements OnInit {
     this.getSummary();
   }
 
-  public summary; 
   public weatherData: LocationWeather;
-  public today: WeatherInfo[];
+  public today: WeatherInfo;
 
   getSummary() {
     this.metaWeather.getLocationWoeid(this.aR.snapshot.params.woeid)
       .subscribe(wData => {
         console.log('Location Info: ', wData);
+        const [dayOne, ...theRest] = wData.consolidated_weather;
+      
+        wData.consolidated_weather = theRest;
         this.weatherData = wData;
-        this.today = wData.consolidated_weather;
+        this.today = dayOne;
       });
   }
 }

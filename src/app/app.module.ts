@@ -7,6 +7,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { FormsModule } from '@angular/forms';
 import { WeatherSummaryPageComponent } from './weather-summary-page/weather-summary-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

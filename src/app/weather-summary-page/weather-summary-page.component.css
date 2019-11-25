@@ -1,0 +1,34 @@
+.pageLayout{
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 15%;
+    text-align: center;
+}
+
+.wTitle{
+    color: cornsilk;
+    text-align: center;
+}
+
+.wData{
+    color: cornsilk;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(153, 164, 214);
+    color: white;
+    margin: 2%;
+
+    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+#wInfo tr:hover {
+    background-color: rgb(83, 81, 81);
+}

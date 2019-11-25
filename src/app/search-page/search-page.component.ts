@@ -10,7 +10,7 @@ import { MetaLocation } from '../metalocation.model';
 })
 export class SearchPageComponent implements OnInit {
 
-  public locString = 'hello';
+  public locString = '';
 
   constructor(
     private metaWeather: MetaWeatherService,
@@ -24,7 +24,7 @@ export class SearchPageComponent implements OnInit {
     this.metaWeather.getLocation(this.locString)
       .subscribe(loc => {
         console.log('Location Info: ', loc);
-        this.router.navigate(['location', loc[0].woeid]);
+        this.router.navigate(['location', loc.woeid]);
       });
   }
 }

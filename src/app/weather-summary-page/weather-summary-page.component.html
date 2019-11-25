@@ -1,9 +1,33 @@
-<h1>{{weatherData?.title}}</h1>
-<div *ngFor="let weather of today">
-    <h3>
-        Temperature: {{weather.max_temp|number:"1.0-0"}} 'C
-        Humidity: {{weather.humidity}}
-        Wind Speed: {{weather.wind_speed|number:"1.0-0"}} mph
-        {{weather.weather_state_name}}
-    </h3>
+<div class="pageLayout">
+    <mat-card-header>
+        <mat-card-title>
+            <h1 class="wTitle">{{weatherData?.title}}</h1>
+        </mat-card-title>
+
+    </mat-card-header>
+    <div>
+        <h3>Now</h3>
+        <table class="wData" id="wInfo">
+            <tr>
+                <th class="md-2">{{today?.applicable_date| date:'EEEE'}}</th>
+                <th class="md-2">Temperature: {{today?.the_temp|number:"1.0-0"}}°C</th>
+                <th class="md-2">Humidity: {{today?.humidity}}</th>
+                <th class="md-2">Wind Speed: {{today?.wind_speed|number:"1.0-0"}} mph</th>
+                <th class="md-2">{{today?.weather_state_name}}</th>
+            </tr>
+        </table>
+
+        <h3>Next 5 days</h3>
+        <div>
+            <table class="wData" id="wInfo">
+                <tr *ngFor="let weather of weatherData?.consolidated_weather">
+                    <th class="md-2" >{{weather.applicable_date| date:'EEEE'}}</th>
+                    <th class="md-2">Temperature: {{weather.max_temp|number:"1.0-0"}}°C</th>
+                    <th class="md-2">Humidity: {{weather.humidity}}</th>
+                    <th class="md-2">Wind Speed: {{weather.wind_speed|number:"1.0-0"}} mph</th>
+                    <th class="md-2">{{weather.weather_state_name}}</th>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
